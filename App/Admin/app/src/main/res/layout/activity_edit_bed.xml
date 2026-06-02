@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".EditBedActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1E93D6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:titleMarginStart="25dp"
+        app:logo="@drawable/ic_baseline_single_bed_24"
+        app:title="Edit Bed"/>
+
+
+    <EditText
+        android:id="@+id/et_patient_name"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="113dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Patient Name:"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/et_patient_age"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_patient_age"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Patient Age:"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/et_patient_gender"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_patient_name" />
+
+    <EditText
+        android:id="@+id/et_patient_gender"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Patient Gender:"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/et_patient_guardians_phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_patient_age" />
+
+    <EditText
+        android:id="@+id/et_patient_guardians_phone"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="7dp"
+        android:hint="Patient Guardians Phone:"
+        android:inputType="phone"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/et_doctor_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_patient_gender" />
+
+    <EditText
+        android:id="@+id/et_doctor_name"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Doctor Name:"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/et_doctor_phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_patient_guardians_phone" />
+
+    <EditText
+        android:id="@+id/et_doctor_phone"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="15dp"
+        android:hint="Doctor Phone:"
+        android:textColor="@color/black"
+        android:inputType="phone"
+        android:padding="10dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btn_publish"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_doctor_name" />
+
+    <Button
+        android:id="@+id/btn_publish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:text="Publish"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/btn_release_patient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_doctor_phone" />
+
+    <Button
+        android:id="@+id/btn_release_patient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="190dp"
+        android:text="Release Patient"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_publish"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="@+id/btn_publish"
+        app:layout_constraintTop_toBottomOf="@+id/btn_publish" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
